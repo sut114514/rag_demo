@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-10-26T03:46:10.591318+00:00",
+  "source_pdf": "D:\\Desktop\\study\\codex_test\\rag_demo\\output\\terraria\\泰拉瑞亚30条饰品合成路径.pdf",
+  "source_sha256": "3db92da09073ae4a581bb5b3626bac54b9c459896a791ec460b4345b817a00ba",
+  "page_count": 5,
+  "chunk_count": 30,
+  "chunk_strategy": "one_complete_recipe_per_chunk",
+  "embedding_model": "BAAI/bge-small-zh-v1.5",
+  "vector_dimension": 512,
+  "vector_dtype": "float32",
+  "normalized": true,
+  "similarity": "cosine",
+  "index_type": "numpy_flat_exact",
+  "chunks_sha256": "a148ee35d290f97dfc843e1233da9c64683b13825be05cf862e8711ac2f14c84",
+  "vectors_sha256": "f92f5654469f68be7367c68f300f61e5d0e2acd6b14aec426242995d6f55a91b",
+  "packages": {
+    "fastembed": "0.9.1",
+    "onnxruntime": "1.31.0",
+    "pypdf": "6.21.2",
+    "numpy": "2.5.4"
+  }
+}

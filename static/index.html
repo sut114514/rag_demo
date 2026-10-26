@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>泰拉瑞亚 · 知识库问答</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+  <div class="layout">
+    <aside>
+      <a class="brand" href="/" aria-label="知识库问答首页"><span class="mark">T</span><span>泰拉瑞亚<small>知识库问答</small></span></a>
+      <button id="clear" class="new-chat">＋ 新对话</button>
+      <section class="library">
+        <h2>当前知识库</h2>
+        <div class="file-icon">PDF</div>
+        <p>30 条饰品合成路径</p>
+        <span id="kb-status" class="muted">正在连接知识库…</span>
+        <a href="/source.pdf" target="_blank" rel="noopener">查看原始文档 ↗</a>
+      </section>
+      <div class="sidebar-bottom"><span class="dot" id="status-dot"></span><span id="provider-status">正在检查服务…</span><small id="model-label">DeepSeek</small></div>
+    </aside>
+    <main>
+      <header><span>饰品合成助手</span><div class="header-actions"><span class="badge">基于你的 PDF 回答</span><button id="clear-mobile" type="button">新对话</button></div></header>
+      <div id="scroll-area" class="scroll-area">
+        <section id="welcome" class="welcome">
+          <span class="eyebrow">TERRARIA KNOWLEDGE BASE</span>
+          <h1>下一件饰品，怎么合成？</h1>
+          <p>问材料、制作站或完整路线，回答附带可查看的知识库来源。</p>
+          <div class="suggestions">
+            <button data-question="泰拉闪耀靴的完整合成路线是什么？"><strong>泰拉闪耀靴</strong><span>查看完整合成路线 →</span></button>
+            <button data-question="十字章护身符需要哪些材料？"><strong>十字章护身符</strong><span>查找材料与制作站 →</span></button>
+            <button data-question="魔法手铐在新旧版本中的配方有什么区别？"><strong>魔法手铐</strong><span>了解版本配方差异 →</span></button>
+          </div>
+        </section>
+        <div id="messages" class="messages" aria-live="polite" aria-relevant="additions"></div>
+      </div>
+      <div class="composer-wrap">
+        <form id="chat-form" class="composer">
+          <label class="sr-only" for="question">你的问题</label>
+          <textarea id="question" rows="2" maxlength="1000" placeholder="例如：烈火手套需要哪些材料？" required></textarea>
+          <div class="composer-bottom"><span>Enter 发送 · Shift + Enter 换行</span><button type="submit" id="send">发送 <span aria-hidden="true">↑</span></button></div>
+        </form>
+        <p class="footnote">仅参考当前知识库；提问和检索到的配方片段会发送给 DeepSeek。</p>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
